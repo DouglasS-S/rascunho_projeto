@@ -1,160 +1,248 @@
+/* hotel.css */
 body {
-    background-color: darksalmon;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #0071c2, #00c2cb);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilizando a seção de busca */
+.search-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Flexibilidade para ajustar no layout */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilo para o campo de destino */
+.search-box input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px; /* Largura ajustável */
+  margin-right: 10px;
+}
+
+/* Container dos campos de data (check-in e check-out) */
+.date-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #ccc;  /* Borda para unir os campos de data */
+  border-radius: 5px;
+}
+
+/* Estilo para os campos de data */
+.date-field {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #fff; /* Fundo branco */
+  width: 130px;
+  text-align: center;
+  color: #333;
+  border-right: 1px solid #ccc;
+}
+
+/* Estilo do botão de busca */
+.search-box button {
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #1E90FF;
+  color: white;
+}
+
+.search-box i {
+  margin-right: 5px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
   }
-  
-  .menuprincipal {
-    background-color: orangered;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .menu {
-    list-style: none;
-    float: left;
-    margin-left: 450px;
-    padding-top: 30px;
-  }
-  
-  .menu li {
-    position: relative;
-    float: left;
-    padding: 20px;
-  }
-  
-  .menu li a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    display: block;
-  }
-  
-  .menu li a:hover {
-    color: #fff;
-    -moz-box-shadow: 0 3px 10px 0 #ccc;
-    -webkit-box-shadow: 0 3px 10px 0 #ccc;
-    text-shadow: 0px 0px 5px #fff;
-  }
-  
-  .menu li ul {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    display: none;
-  }
-  
-  .menu li:hover ul,
-  .menu li.over ul {
-    display: block;
-  }
-  
-  .menu li ul li {
-    display: block;
-    width: 150px;
-  }
-  
-  .banner {
-    background-color: pink;
-    width: 1300px;
-    height: 650px;
-    margin-left: 131px;
-    margin-bottom: 30px;
-  }
-  
-  .flash {
-    background-color: aquamarine;
-  }
-  
-  #div2 {
-    display: inline-block;
-    background-color: red;
-    width: 250px;
-    height: 250px;
-    margin-left: 150px;
-  }
-  
-  #div3 {
-    display: inline-block;
-    background-color: yellow;
-    width: 250px;
-    height: 250px;
-  }
-  
-  #div4 {
-    display: inline-block;
-    background-color: gray;
-    width: 250px;
-    height: 250px;
-  }
-  
-  #div5 {
-    display: inline-block;
-    background-color: green;
-    width: 250px;
-    height: 250px;
-  }
-  
-  #div6 {
-    display: inline-block;
-    background-color: violet;
-    width: 250px;
-    height: 250px;
-  }
-  
-  .flash2 {
-    background-color: violet;
-  }
-  
-  #div7 {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: red;
-    width: 600px;
-    height: 300px;
-    margin-left: 180px;
-  }
-  
-  #div8 {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: greenyellow;
-    width: 600px;
-    height: 300px;
-  }
-  
-  .flash3 {
-    background-color: greenyellow;
-  }
-  
-  #div9 {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: red;
-    width: 416px;
-    height: 300px;
-    margin-left: 150px;
-  }
-  
-  #div10 {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: olivedrab;
-    width: 416px;
-    height: 300px;
-  }
-  
-  #div11 {
-    margin-top: 20px;
-    display: inline-block;
-    background-color: blue;
-    width: 416px;
-    height: 300px;
-  }
-  
-  .rodape {
-    background-color: grey;
-    width: 100%;
-    height: 400px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
+}
+
+
+nav a {
+  color: white;
+  margin: 0px 15px;
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-button{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000; /*Para garantir que fique por cima de tudo*/
+  display: flex; /*Importante*/
+  align-items: center; 
+  gap: 8px; /*Cria espaço automático entre o ícone e o texto*/
+}
+
+.login-button:hover{
+  background-color: #1E90FF;
+  color: white;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb2101b?auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  color: #0071c2;
+  font-size: 36px;
+}
+
+.hero p{
+  color: #0071c2;
+}
+
+.img-container{
+  margin: auto;
+  position: relative;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  left: 325px;
+  background-color: rgba(250, 250, 250, 0.85);
+  color: #0071c2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover{
+  background: #0071c2;
+  color: white;
+}
+
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.quartos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.quarto-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.quarto-card:hover {
+  transform: translateY(-5px);
+}
+
+.quarto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.quarto-card h3 {
+  margin: 16px 0 8px;
+}
+
+.quarto-card p {
+  padding: 0 16px 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.quarto-card button {
+  margin-bottom: 16px;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quarto-card button:hover {
+  background-color: #1E90FF;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+footer {
+  background: linear-gradient(to right, #0071c2, #00c2cb);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+

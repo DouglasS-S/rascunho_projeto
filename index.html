@@ -1,62 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-</head>
+  <meta charset="UTF-8">
+  <title>Hotel Paraíso</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+</head>
 <body>
 
-    <div class="menuprincipal">
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">O que fazemos?</a></li>
-                <li><a href="#">Links</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
+  <header>
 
+    <h1>Hotel Paraíso</h1>
+
+    <div class="search-box">
+      
+        <input type="text" placeholder="Para onde você vai?" />
+      
+      <div class="date-container">
+        <input type="date" id="checkin" aria-label="Data de Check-in" class="date-field">
+        <input type="date" id="checkout" aria-label="Data de Check-out" class="date-field">
+      </div>
+  
+      <button onclick="pesquisarDestino()">
+        <i class="fa-solid fa-magnifying-glass"></i> Buscar
+      </button>
     </div>
 
-    <div class="banner">
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#quartos">Quartos</a>
+      <a href="#comodidades">Comodidades</a>
+      <a href="#contato">Contato</a>
+      <button class="login-button">
+        <i class="fa-solid fa-user"></i><span>Login</span>
+      </button>
+    </nav>
 
+  </header>
+
+    <section class="hero">
+        <h2>Bem-vindo ao seu refúgio ideal</h2>
+        <p>Conforto, elegância e natureza em perfeita harmonia.</p>
+      </section>
+
+  <section id="sobre" class="section">
+    <h2>Sobre o Hotel</h2>
+    <p>Localizado à beira-mar, o Hotel Paraíso oferece uma experiência única com suítes modernas, gastronomia refinada e atendimento excepcional.</p>
+  </section>
+
+  <div class="img-container">
+    <img src="./imagens/hotel.png" alt="Hotel a beira-mar">
+    <a href="#quartos" ><button class="btn">Ver Quartos</button></a>
+  </div>
+
+  <section id="quartos" class="section">
+
+    <h2>Quartos</h2>
+  <div class="quartos-container">
+
+    <div class="quarto-card">
+      <img src="./imagens/hotel2.png" alt="Quarto de Luxo">
+      <h3>Quarto Luxo</h3>
+      <p>Suíte com vista para o mar, cama king size e ar-condicionado.</p>
+      <button>Ver mais</button>
     </div>
 
-    <div class="flash">
-
-        <div id="div2"></div>
-        <div id="div3"></div>
-        <div id="div4"></div>
-        <div id="div5"></div>
-        <div id="div6"></div>
-
+    <div class="quarto-card">
+      <img src="./imagens/hotel3.png" alt="Quarto Simples">
+      <h3>Quarto Simples</h3>
+      <p>Ideal para uma estadia prática e confortável, com Wi-Fi grátis.</p>
+      <button>Ver mais</button>
+    </div>
+    
+    <div class="quarto-card">
+      <img src="./imagens/hotel4.png" alt="Quarto Família">
+      <h3>Quarto Família</h3>
+      <p>Espaço para toda a família, com 2 camas de casal e varanda.</p>
+      <button>Ver mais</button>
     </div>
 
-    <div class="flash2">
+  </div>
 
-        <div id="div7"></div>
-        <div id="div8"></div>
+  </section>
 
+  <section id="comodidades" class="section">
+    <h2>Comodidades</h2>
+    <ul>
+      <li>✔ Café da manhã incluso</li>
+      <li>✔ Wi-Fi gratuito</li>
+      <li>✔ Piscina e spa</li>
+      <li>✔ Estacionamento privativo</li>
+    </ul>
+  </section>
 
-    </div>
+  <section id="contato" class="section">
+    <h2>Contato</h2>
+    <p>Email: contato@hotelparaiso.com</p>
+    <p>Telefone: (11) 1234-5678</p>
+  </section>
 
-    <div class="flash3">
-
-        <div id="div9"></div>
-        <div id="div10"></div>
-        <div id="div11"></div>
-
-    </div>
-
-    <div class="rodape">
-
-
-    </div>
-
+  <footer>
+    <p>&copy; 2025 Hotel Paraíso. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
+
